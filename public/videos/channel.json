@@ -1,6 +1,6 @@
 {
     "kind": "youtube#channelListResponse",
-    "etag": "icgP__WW4K5Vm11RIOt8jMqrBlw",
+    "etag": "vdoy_X-7-ZfJOFnEwrKKqkGZ2-k",
     "pageInfo": {
         "totalResults": 1,
         "resultsPerPage": 5
@@ -8,35 +8,47 @@
     "items": [
         {
             "kind": "youtube#channel",
-            "etag": "X-Sf3EmAQyns7dUJk8HmwDkN7v0",
-            "id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+            "etag": "kJDhGgvNROJnYpatj7s1Ny1NpwA",
+            "id": "UC4G10tk3AHFuyMIuD3rHOBA",
             "snippet": {
-                "title": "Google for Developers",
-                "description": "Subscribe to join a community of creative developers and learn the latest in Google technology — from AI and cloud, to mobile and web.\n\nExplore more at developers.google.com\n\n",
-                "customUrl": "@googledevelopers",
-                "publishedAt": "2007-08-23T00:34:43Z",
+                "title": "RDCworld1",
+                "description": "RDCworld1 is all about making our fans laugh. We provide entertainment through skits, vlogs, short films, and more. Therefore, if you come across this channel please join our world and leave feedback!\n\n\n\"Anticipating rain, I can't make the same mistakes again.\"\n\n\nThank you for all of y'alls support!!! After reaching 1 million subscribers I feel like a GREAT mission has been accomplished, but when one mission ends another begins...\n\nCheck out our shop! https://www.rdcworld1.com/shop\n\nMailing address:\nRDCworld\nPO Box 6124\nRound Rock, TX 78683",
+                "customUrl": "@rdcworld1",
+                "publishedAt": "2012-03-02T04:18:33Z",
                 "thumbnails": {
                     "default": {
-                        "url": "https://yt3.ggpht.com/fca_HuJ99xUxflWdex0XViC3NfctBFreIl8y4i9z411asnGTWY-Ql3MeH_ybA4kNaOjY7kyA=s88-c-k-c0x00ffffff-no-rj",
+                        "url": "https://yt3.ggpht.com/ytc/AGIKgqNGgIvjTMl5Qm-WG4HK7DkafE095UFjkJFE3gA9Sw=s88-c-k-c0x00ffffff-no-rj",
                         "width": 88,
                         "height": 88
                     },
                     "medium": {
-                        "url": "https://yt3.ggpht.com/fca_HuJ99xUxflWdex0XViC3NfctBFreIl8y4i9z411asnGTWY-Ql3MeH_ybA4kNaOjY7kyA=s240-c-k-c0x00ffffff-no-rj",
+                        "url": "https://yt3.ggpht.com/ytc/AGIKgqNGgIvjTMl5Qm-WG4HK7DkafE095UFjkJFE3gA9Sw=s240-c-k-c0x00ffffff-no-rj",
                         "width": 240,
                         "height": 240
                     },
                     "high": {
-                        "url": "https://yt3.ggpht.com/fca_HuJ99xUxflWdex0XViC3NfctBFreIl8y4i9z411asnGTWY-Ql3MeH_ybA4kNaOjY7kyA=s800-c-k-c0x00ffffff-no-rj",
+                        "url": "https://yt3.ggpht.com/ytc/AGIKgqNGgIvjTMl5Qm-WG4HK7DkafE095UFjkJFE3gA9Sw=s800-c-k-c0x00ffffff-no-rj",
                         "width": 800,
                         "height": 800
                     }
                 },
                 "localized": {
-                    "title": "Google for Developers",
-                    "description": "Subscribe to join a community of creative developers and learn the latest in Google technology — from AI and cloud, to mobile and web.\n\nExplore more at developers.google.com\n\n"
+                    "title": "RDCworld1",
+                    "description": "RDCworld1 is all about making our fans laugh. We provide entertainment through skits, vlogs, short films, and more. Therefore, if you come across this channel please join our world and leave feedback!\n\n\n\"Anticipating rain, I can't make the same mistakes again.\"\n\n\nThank you for all of y'alls support!!! After reaching 1 million subscribers I feel like a GREAT mission has been accomplished, but when one mission ends another begins...\n\nCheck out our shop! https://www.rdcworld1.com/shop\n\nMailing address:\nRDCworld\nPO Box 6124\nRound Rock, TX 78683"
                 },
                 "country": "US"
+            },
+            "contentDetails": {
+                "relatedPlaylists": {
+                    "likes": "",
+                    "uploads": "UU4G10tk3AHFuyMIuD3rHOBA"
+                }
+            },
+            "statistics": {
+                "viewCount": "1268277089",
+                "subscriberCount": "6340000",
+                "hiddenSubscriberCount": false,
+                "videoCount": "353"
             }
         }
     ]

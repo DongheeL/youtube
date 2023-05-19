@@ -9,7 +9,9 @@ export default function App() {
         <>
             <Header />
             <QueryClientProvider client={queryClient}>
+            {/* <div className='w-10/12  m-auto'> */}
               <Outlet />
+            {/* </div> */}
             </QueryClientProvider>
         </>
     );
