@@ -9,6 +9,7 @@ export default function SearchBox({ text ,handleChange ,handleSubmit}) {
             <div className='flex w-full'>
                 <form className="flex-auto align-middle border rounded-l-3xl p-2 pl-4" onSubmit={handleSubmit}>
                     <input
+                        className='w-full outline-none'
                         value={text}
                         onChange={handleChange}
                         placeholder='검색'

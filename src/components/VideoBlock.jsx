@@ -25,16 +25,17 @@ export default function VideoBlock ({item}) {
 
 
     return(
-        <div className='w-10/12 m-auto'>
+        <div className='relative w-80 m-2'>
+        {/* <div className='w-10/12 m-auto'> */}
             {item && 
                 <>
                     <img 
-                        className='m-auto' 
+                        // className='m-auto' 
                         src={item.snippet.thumbnails.medium.url} 
                         onClick={handleClick}
                     ></img>
-                    <div className='flex h-16'>
-                        <div className='w-1/4'>
+                    <div className='flex h-16 w-80 m-auto '>
+                        <div className='w-1/6'>
                             {channelInfo && 
                                 <>
                                     <img 

@@ -17,14 +17,22 @@ export default function VideoDetail() {
     // })
 
     return (
-        <div className='w-10/12  m-auto'>
+        <div className='w-full h-full m-auto'>
             <div>
                 VideoDetail
             </div>
             <YouTube
                 videoId={videoId}                  // defaults -> ''
-                // className={string}                // defaults -> ''
-                // iframeClassName={string}          // defaults -> ''
+                opts = {{
+                    height: '390',
+                    width: '640',
+                    playerVars: {
+                      // https://developers.google.com/youtube/player_parameters
+                      autoplay: 1,
+                    }
+                }}
+                // className={'w-full'}                // defaults -> ''
+                // iframeClassName={'w-full h-full'}          // defaults -> ''
                 // title={string}                    // defaults -> ''
                 // loading={string}                  // defaults -> undefined
                 // opts={obj}                        // defaults -> {}
