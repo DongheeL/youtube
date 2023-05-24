@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       colors: {
         brand: '#FF0000'
+      },
+      gridTemplateColumns: {
+        auto: 'repeat(auto-fit, minmax(320px, max-content))'
       }
     },
   },

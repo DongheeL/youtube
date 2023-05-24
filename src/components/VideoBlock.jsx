@@ -25,12 +25,10 @@ export default function VideoBlock ({item}) {
 
 
     return(
-        <div className='relative w-80 m-2'>
-        {/* <div className='w-10/12 m-auto'> */}
+        <div className='list-none w-80 p-5px'>
             {item && 
                 <>
                     <img 
-                        // className='m-auto' 
                         src={item.snippet.thumbnails.medium.url} 
                         onClick={handleClick}
                     ></img>
