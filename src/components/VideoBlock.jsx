@@ -40,12 +40,12 @@ export default function VideoBlock ({item}) {
                                         className=' rounded-full'
                                         src={channelInfo.snippet.thumbnails.default.url} 
                                     />
-                                    <p>{channelInfo.snippet.title}</p>
                                 </>
                             }
                         </div>
-                        <div className='w-3/4'>
-                            <p className='h-8 text-sm text-ellipsis overflow-hidden whitespace-nowrap' onClick={handleClick} >{item.snippet.title}</p>
+                        <div className='w-3/4 m-auto'>
+                            <p className='h-8 text-lg font-semibold text-ellipsis overflow-hidden whitespace-nowrap' onClick={handleClick} >{item.snippet.title}</p>
+                            <p>{channelInfo.snippet.title}</p>
                             <p className='text-sm'>{publishedAt}</p>
                         </div>
                     </div>
