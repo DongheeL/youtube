@@ -3,18 +3,18 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
 import VideoBlock from './VideoBlock';
 import Youtube, { search } from '../api/youtube';
-import FakeYoutube from '../api/fakeYoutube';
+import FakeYoutube from '../api/fakeYoutubeClient';
+import { useYoutubeApi } from '../context/YoutubeApiContext';
 
 export default function Videos() {
     const {keyword} = useParams();
+    const {youtube} = useYoutubeApi();
 
     const {
         isLoading, 
         error, 
         data: videoList
     } = useQuery(['videoList', keyword ], ()=>{
-        const youtube = new FakeYoutube();
-        // const youtube = new Youtube();
         return youtube.search(keyword);
     })
 
