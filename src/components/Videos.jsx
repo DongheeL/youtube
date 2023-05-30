@@ -19,11 +19,12 @@ export default function Videos() {
     })
 
     return (
-        <div className='relative w-full h-full justify-start mt-4'>
+        <div className='px-1'>
+        {/* // <div className='relative w-full h-full justify-start mt-4'>  */}
             {isLoading && <p>Loading...</p>}
             {error && <p>Something is wrong </p>}
             {videoList && 
-                <ul className='grid grid-cols-auto justify-center gap-4'>
+                <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 gap-y-4 px-4'>
                     {videoList.map(video => <VideoBlock key={video.id} item={video} />)}    
                 </ul>
             }

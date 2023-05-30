@@ -9,6 +9,10 @@ export default class Youtube {
         return keyword ? this.#searchByKeyword(keyword) : this.#mostPopular();
     }
 
+    async related(videoId) {
+        return this.#related();
+    }
+
     async #searchByKeyword(keyword) {
         return this.apiClient.search({
             params: {
@@ -29,6 +33,17 @@ export default class Youtube {
             part: 'snippet',
             maxResults: 25,
             chart: 'mostPopular'
+        }})
+        .then((res) => res.data.items)
+    }
+
+    async #related() {
+       return this.apiClient
+       .related({
+            params: {
+            part: 'snippet',
+            maxResults: 25,
+            chart: 'related'
         }})
         .then((res) => res.data.items)
     }

@@ -1,44 +1,34 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import YouTube from 'react-youtube';
+import { useYoutubeApi } from '../context/YoutubeApiContext';
+import RelatedVideo from './RelatedVideo';
 
 export default function VideoDetail() {
     const {videoId} = useParams();
+    const {state: {item}} = useLocation();
+    const {youtube} = useYoutubeApi();
 
-    // const {
-    //     isLoading, 
-    //     error, 
-    //     data: channelInfo
-    // } = useQuery(['channelInfo', item.snippet.channelId ], async () =>{
-    //     return fetch(`/videos/channel.json`)
-    //     .then((res) => res.json())
-    //     .then(data => data.items);
-    // })
+    const {
+        isLoading, 
+        error, 
+        data: relatedVideos
+    } = useQuery(['relatedVideos', videoId ], ()=>{
+        return youtube.related(videoId);
+    })
 
     return (
-        <div className='w-full h-full m-auto'>
-            <div>
-                VideoDetail
-            </div>
-            <YouTube
-                videoId={videoId}                  // defaults -> ''
-                opts = {{
-                    height: '390',
-                    width: '640',
-                    playerVars: {
-                      // https://developers.google.com/youtube/player_parameters
-                      autoplay: 1,
-                    }
-                }}
-                // className={'w-full'}                // defaults -> ''
-                // iframeClassName={'w-full h-full'}          // defaults -> ''
-                // title={string}                    // defaults -> ''
-                // loading={string}                  // defaults -> undefined
-                // opts={obj}                        // defaults -> {}
-                // onReady={func}                    // defaults -> noop
-            />
-        </div>
+        // <div className='lg:flex '>
+            <section className=''>
+                <iframe id="player" type="text/html" width="100%" height="640"
+                    src={`http://www.youtube.com/embed/${item.id}`}
+                    frameBorder="0"/>
+            </section>
+        //     <ul className=' py-1 lg:py-0 lg:w-96 lg:px-1'>
+        //         {relatedVideos && relatedVideos.map(video => <RelatedVideo key={video.id} item={video} />)}    
+        //     </ul>
+        // </div>
     );
 }
 

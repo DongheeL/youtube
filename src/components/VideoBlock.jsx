@@ -10,7 +10,7 @@ export default function VideoBlock ({item}) {
 
     const handleClick = (e) =>{
         e.preventDefault();
-        navigate(`/videos/watch/${item.id}`);
+        navigate(`/videos/watch/${item.id}`, { state: {item} });
     }
 
     const {
@@ -25,32 +25,21 @@ export default function VideoBlock ({item}) {
 
 
     return(
-        <div className='list-none w-80 p-5px'>
+        <li className=''>
             {item && 
                 <>
                     <img 
+                        className='cursor-pointer w-full'
                         src={item.snippet.thumbnails.medium.url} 
                         onClick={handleClick}
                     ></img>
-                    <div className='flex h-16 w-80 m-auto '>
-                        <div className='w-1/6'>
-                            {channelInfo && 
-                                <>
-                                    <img 
-                                        className=' rounded-full'
-                                        src={channelInfo.snippet.thumbnails.default.url} 
-                                    />
-                                </>
-                            }
-                        </div>
-                        <div className='w-3/4 m-auto'>
-                            <p className='h-8 text-lg font-semibold text-ellipsis overflow-hidden whitespace-nowrap' onClick={handleClick} >{item.snippet.title}</p>
-                            <p>{channelInfo.snippet.title}</p>
-                            <p className='text-sm'>{publishedAt}</p>
-                        </div>
+                    <div>
+                        <p className='font-semibold my-2 line-clamp-2 cursor-pointer' onClick={handleClick} >{item.snippet.title}</p>
+                        <p className='text-sm opacity-70'>{item.snippet.channelTitle}</p>
+                        <p className='text-sm opacity-70'>{publishedAt}</p>
                     </div>
                 </>
-            }
-        </div>
+            } 
+        </li>
     )
 }
