@@ -9,7 +9,7 @@ export default function SearchBox({ text ,handleChange ,handleSubmit}) {
             <div className='flex w-full'>
                 <form className="flex-auto align-middle border rounded-l-3xl p-2 pl-4" onSubmit={handleSubmit}>
                     <input
-                        className='w-full outline-none'
+                        className='w-full outline-none bg-transparent'
                         value={text}
                         onChange={handleChange}
                         placeholder='검색'
@@ -17,7 +17,7 @@ export default function SearchBox({ text ,handleChange ,handleSubmit}) {
                 </form>
                 <button className='w-16 border rounded-r-3xl p-1 pl-5 border-l-0' onClick={handleSubmit}>
                     <IconContext.Provider value={{ className:'text-3xl mr-0' }}>
-                        <IoIosSearch />
+                        <IoIosSearch color='gray'/>
                     </IconContext.Provider>
                 </button>
             </div>

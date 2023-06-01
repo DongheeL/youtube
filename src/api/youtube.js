@@ -45,6 +45,6 @@ export default class Youtube {
             maxResults: 25,
             chart: 'related'
         }})
-        .then((res) => res.data.items)
+        .then(items => items.map(item=>({...item, id: item.id.videoId})))
     }
 }

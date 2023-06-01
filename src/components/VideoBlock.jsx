@@ -13,17 +13,6 @@ export default function VideoBlock ({item}) {
         navigate(`/videos/watch/${item.id}`, { state: {item} });
     }
 
-    const {
-        isLoading, 
-        error, 
-        data: channelInfo
-    } = useQuery(['channelInfo', item.snippet.channelId ], async () =>{
-        return fetch(`/videos/channel.json`)
-        .then((res) => res.json())
-        .then(data => data.items[0]);
-    })
-
-
     return(
         <li className=''>
             {item && 
@@ -34,7 +23,7 @@ export default function VideoBlock ({item}) {
                         onClick={handleClick}
                     ></img>
                     <div>
-                        <p className='font-semibold my-2 line-clamp-2 cursor-pointer' onClick={handleClick} >{item.snippet.title}</p>
+                        <p className='font-semibold my-2 line-clamp-2 cursor-pointer h-12' onClick={handleClick} >{item.snippet.title}</p>
                         <p className='text-sm opacity-70'>{item.snippet.channelTitle}</p>
                         <p className='text-sm opacity-70'>{publishedAt}</p>
                     </div>

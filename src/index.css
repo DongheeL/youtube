@@ -25,6 +25,16 @@ body {
   max-width: 80rem;
 }
 
+.dark {
+  background-color: rgb(41, 41, 41);
+  color: #e5e7eb;
+  
+}
+/* 
+#button {
+  color: rgba(255, 255, 255, 0.715);
+} */
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
