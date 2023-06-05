@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider, useQueryClient } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Header from './components/Header';
 import { Outlet } from 'react-router-dom';
 import { YoutubeApiProvider } from './context/YoutubeApiContext';

@@ -1,13 +1,12 @@
-import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import { useLocation, useParams } from 'react-router-dom';
-import YouTube from 'react-youtube';
-import { useYoutubeApi } from '../context/YoutubeApiContext';
+import { useLocation} from 'react-router-dom';
 import RelatedVideos from './RelatedVideos';
+import ChannelInfo from './ChannelInfo';
 
 export default function VideoDetail() {
-    const {videoId} = useParams();
     const {state: {item}} = useLocation();
+    const { title, channelId, channelTitle, description } = item.snippet;
+    console.log(item.snippet)
 
     return (
         // <div className='lg:flex '>
@@ -15,19 +14,18 @@ export default function VideoDetail() {
             <section className='lg:flex-1'>
                 <iframe id="player" type="text/html" width="100%" height="640"
                     src={`http://www.youtube.com/embed/${item.id}`}
-                    frameBorder="0"/>
-                <div className='w-full'>
-                    
+                    frameBorder="0"
+                    title={title}/>
+                <div className='p-8'>
+                    <h2 className='text-xl fonbol'>{title}</h2>
+                    <ChannelInfo id={channelId} name={channelTitle} />
+                    <pre className='whitespace-pre-wrap'>{description}</pre>
                 </div>
             </section>
             <section>
-                <RelatedVideos video={item} />
+                <RelatedVideos video={item}/>
             </section>
         </div>
-        //     <ul className=' py-1 lg:py-0 lg:w-96 lg:px-1'>
-        //         {relatedVideos && relatedVideos.map(video => <RelatedVideo key={video.id} item={video} />)}    
-        //     </ul>
-        // </div>
     );
 }
 

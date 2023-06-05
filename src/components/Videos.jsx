@@ -1,9 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useEffect, useState } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
+import React from 'react';
+import { useParams} from 'react-router-dom';
 import VideoBlock from './VideoBlock';
-import Youtube, { search } from '../api/youtube';
-import FakeYoutube from '../api/fakeYoutubeClient';
 import { useYoutubeApi } from '../context/YoutubeApiContext';
 
 export default function Videos() {
@@ -14,13 +12,12 @@ export default function Videos() {
         isLoading, 
         error, 
         data: videoList
-    } = useQuery(['videoList', keyword ], ()=>{
-        return youtube.search(keyword);
+    } = useQuery(['videoList', keyword ], ()=>youtube.search(keyword), {
+        staleTime:1000*60*1,
     })
 
     return (
         <div className='px-1'>
-        {/* // <div className='relative w-full h-full justify-start mt-4'>  */}
             {isLoading && <p>Loading...</p>}
             {error && <p>Something is wrong </p>}
             {videoList && 
