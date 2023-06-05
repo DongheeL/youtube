@@ -13,7 +13,7 @@ export default function VideoDetail() {
         <div className='lg:flex p-4'>
             <section className='lg:flex-1'>
                 <iframe id="player" type="text/html" width="100%" height="640"
-                    src={`http://www.youtube.com/embed/${item.id}`}
+                    src={`https://www.youtube.com/embed/${item.id}`}
                     frameBorder="0"
                     title={title}/>
                 <div className='p-8'>
